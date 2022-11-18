@@ -1,0 +1,108 @@
+<section class="analyzerArea">
+    <ng-content select="[analyzerFrame]"></ng-content>
+</section>
+
+<section class="responsiveArea">
+    <article class="windowReadoutArea">
+
+        <screen-dimension-readout
+            *ngIf="WindowSizeReadoutToggle"
+            class="screenReadout"
+            [Size]="WindowDimensions"
+        ></screen-dimension-readout>
+
+    </article>
+
+    <article
+        class="embedShell"
+        #responsiveShell
+        [style.--startWidth]="StartWidth"
+        [style.--startHeight]="StartHeight"
+    >
+        <iframe
+            *ngIf="FirefoxCheck"
+            #responsiveWindow
+            class="iFrame"
+            [src]="iFramePath()"
+        ></iframe>
+        <iframe
+            *ngIf="!FirefoxCheck"
+            #responsiveWindow
+            class="iFrame"
+        ></iframe>
+        <!--<iframe
+            #responsiveWindow
+            class="iFrame"
+        ></iframe>-->
+    </article>
+
+</section>
+
+<section class="controlArea">
+    <ng-content select="[controlFrame]"></ng-content>
+</section>
+
+
+
+
+
+
+
+<!--<ng-content select="[analyzerFrame]"></ng-content>
+
+
+<section class="shell">
+    
+    <screen-dimension-readout
+        *ngIf="WindowSizeReadoutToggle"
+        class="screenReadout"
+        [Size]="WindowDimensions"
+    ></screen-dimension-readout>
+    
+    <article
+        class="iFrameShell"
+        #resizeFrame
+    >
+
+        <iframe #responsiveWindow id="responsiveWindow" class="iFrame"></iframe>
+
+        
+    </article>
+
+</section>
+
+<ng-content select="[controlFrame]"></ng-content>-->
+
+
+
+
+
+
+
+
+
+
+
+<!--<section class="shell">
+
+    <ng-content select="[analyzerFrame]"></ng-content>
+    
+    <screen-dimension-readout
+        *ngIf="WindowSizeReadoutToggle"
+        class="screenReadout"
+        [Size]="WindowDimensions"
+    ></screen-dimension-readout>
+    
+    <article
+        class="iFrameShell"
+        #resizeFrame
+        waResizeBox="content-box"
+        (waResizeObserver)="sizeListener($any($event))"
+    >
+
+        <iframe #responsiveWindow id="responsiveWindow" class="iFrame"></iframe>
+    </article>
+
+</section>
+
+<property-dashboard class="propertyDash"></property-dashboard>-->

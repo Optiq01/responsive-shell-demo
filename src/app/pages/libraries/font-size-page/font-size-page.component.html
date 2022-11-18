@@ -1,0 +1,42 @@
+<section class="pageShell">
+
+    <p>Font Size Library</p>
+
+    <p>
+        The text size library consists of 7 sizes that each have 5 speeds giving you a total of 35 scaling options to apply to your text.  The 7 sizes are captionText, widgetText, articleText, subtitleText, titleText, headlineText and jumbotronText.  The syntax for using this library is simply --[size]-[speed] and just like the box sizes, 1 is the slowest growth rate while 5 is the fastest.  Have a look at the demo below.
+    </p>
+
+    <p>
+        ////  Demo of all font sizes
+    </p>
+
+    <responsive-shell
+        [ComponentInjector]="TextDemoComponent"
+        [StartWidth]="'var(--loMed-2-4)'"
+        [StartHeight]="'var(--loMed-2-4)'"
+    >
+
+        <div analyzerFrame class="analyzer"></div>
+
+        <text-measurement-control controlFrame class="propertyDash"></text-measurement-control>
+
+    </responsive-shell>
+
+    <p>
+        I&#39;m sure you noticed when scaling the window down all the text became pretty much the same size with just enough of a difference to still distinguish a visual hierarchy between them.  We felt this is a much needed feature to keep our text readable at all screen sizes while not having to make media queries every 50px or so to keep it from shrinking out of view.  Just like with the box sizes, the speed is the rate at which the text size will shrink and expand with the size of the screen.  The font sizes also have a static pixel size at their core which can be seen in the chart below.
+    </p>
+
+    <p>
+        ////  Chart of Text pixel sizes
+    </p>
+
+    <p>
+        More will be covered in the section about the srcryTxt configuration class but for now lets finish up with this section by have a look at the Line Size Library.
+    </p>
+
+    <article>
+        <button (click)="previousPage()">Previous</button>
+        <button (click)="nextPage()">Next</button>
+    </article>
+
+</section>

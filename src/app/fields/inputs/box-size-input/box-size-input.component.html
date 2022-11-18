@@ -1,0 +1,16 @@
+<article class="inputShell">
+    <box-size
+        [DefaultSelection]="DefaultSelection?.size"
+        (UpdateSelection)="updateSize($event)"
+    ></box-size>
+
+    <box-scale
+        [DefaultSelection]="DefaultSelection?.scale"
+        (UpdateSelection)="updateScale($event)"
+    ></box-scale>
+
+    <box-speed
+        [DefaultSelection]="DefaultSelection?.speed"
+        (UpdateSelection)="updateSpeed($event)"
+    ></box-speed>
+</article>

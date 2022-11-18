@@ -1,0 +1,83 @@
+<h1 class="mainTitle">Responsive Shell Demonstration</h1>
+
+<section class="demoShell">
+    <p>
+        The Responsive Shell in it&#39;s most minimal form with only an embedded component.
+    </p>
+    
+    <responsive-shell
+        [ComponentInjector]="SrcryBoxDemo"
+        [WindowSizeReadoutToggle]="false"
+        [IframePath]="'srcry-box-demo'"
+        [StartWidth]="'var(--loMed-2-1)'"
+        [StartHeight]="'var(--small-1-1)'"
+    ></responsive-shell>
+</section>
+
+<section class="demoShell">
+    <p>
+        It comes with a size readout that updates through an event listener as you resize the frame.
+    </p>
+    
+    <responsive-shell
+        [ComponentInjector]="TextSizeDemo"
+        [WindowSizeReadoutToggle]="true"
+        [IframePath]="'srcry-box-demo'"
+        [StartWidth]="'var(--loMed-2-1)'"
+        [StartHeight]="'var(--hiMed-1-1)'"
+    ></responsive-shell>
+</section>
+
+<section class="demoShell">
+    <p>
+        It also uses content projection to insert additional content about the embedded element.
+    </p>
+    
+    <responsive-shell
+        [ComponentInjector]="SizeDemo"
+        [DataChannelName]="'srcryDataChannel'"
+        [DataChannelType]="'boxStyleA'"
+        [WindowSizeReadoutToggle]="true"
+        [IframePath]="'box-size-demo'"
+        [StartWidth]="'var(--loMed-2-1)'"
+        [StartHeight]="'var(--small-1-1)'"
+    >
+
+        <size-demo-control
+            controlFrame
+            class="analyzer"
+            [Size]="SizeDemoSetting"
+            [DataChannel]="'srcryDataChannel'"
+            [DataChannelType]="'boxStyleA'"
+            [InitChannelData]="LoadedChannel"
+            (ChannelData)="postData($event)"
+        ></size-demo-control>   
+
+    </responsive-shell>
+</section>
+
+<section class="demoShell">
+
+    <p>
+        You can even embed a dashboard that interacts with the embedded component through a broadcast channel.
+    </p>
+    <responsive-shell
+        [ComponentInjector]="VariationDemo"
+        [WindowSizeReadoutToggle]="true"
+        [StartHeight]="'var(--loMed-1-2)'"
+        [StartWidth]="'var(--loMed-1-2)'"
+        [DataChannelName]="'srcryDataChannel'"
+        [DataChannelType]="'variantA'"
+    >
+        <div analyzerFrame class="analyzer"></div>
+
+        <variant-control
+            controlFrame
+            class="controlFrame"
+            [InitChannelData]="LoadedChannel"
+            [TargetName]="'variantA'"
+            [BoxSizes]="VariantAdata"
+            (SetSize)="postData($event)"
+        ></variant-control>
+    </responsive-shell>
+</section>

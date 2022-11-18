@@ -1,0 +1,12 @@
+<section class="mainShell">
+
+    <size-output [Size]="Props.stretchShrinkMaster" [Title]="'Master Size'"></size-output>
+    
+    <size-output [Size]="Props.stretchShrinkMinCore" [Title]="'Min Core'"></size-output>
+    
+    <size-output [Size]="Props.stretchShrinkMinNudge" [Title]="'Min Nudge'"></size-output>
+    
+    <!--<size-output [Size]="Props.elementSize" [Title]="'Element Size'"></size-output>-->
+    <element-size-analyzer [Size]="Props.elementSize" [Behaviors]="Props.currentBehavior"></element-size-analyzer>
+    
+</section>

@@ -1,0 +1,9 @@
+.shell{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--mt-22), max-content));
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    grid-gap: var(--mt-8);
+    place-items: center;
+    background-color: azure;
+}

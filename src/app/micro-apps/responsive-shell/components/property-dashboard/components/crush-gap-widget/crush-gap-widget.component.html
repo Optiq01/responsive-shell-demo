@@ -1,0 +1,40 @@
+<section class="propertyShell">
+
+    <article class="settingDash">
+
+        <section *ngIf="!SettingToggle" class="settingShell">
+            <p>settings</p>
+
+            <srcry-field
+                [Param]="'crushGap-w'"
+                [Value]="CrushGapW"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event)"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'crushGap-h'"
+                [Value]="CrushGapH"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event)"
+            ></srcry-field>
+        </section>
+
+        <section *ngIf="SettingToggle" class="settingShell">
+
+            <crush-gap-w-input
+                *ngIf="SettingEditor === 'crushGap-w'"
+                [DefaultSize]="CrushGapWSetting"
+                (CloseFrame)="closeSettingFrame()"
+            ></crush-gap-w-input>
+            
+            <crush-gap-h-input
+                *ngIf="SettingEditor === 'crushGap-h'"
+                [DefaultSize]="CrushGapHSetting"
+                (CloseFrame)="closeSettingFrame()"
+            ></crush-gap-h-input>
+
+        </section>
+
+    </article>
+
+</section>

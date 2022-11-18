@@ -1,0 +1,13 @@
+<!--<section class="mainShell">
+    <box-size-variant
+        *ngFor="let i of Sizes"
+        [Width]="i"
+    ></box-size-variant>
+</section>-->
+
+<box-size-variant
+    [Settings]="CurrentSize"
+    (SettingsOutput)="sendBoxSizes($event)"
+></box-size-variant>
+<!--<p>{{CurrentSize.base}}</p>
+<p>{{CurrentSize.setting}}</p>-->

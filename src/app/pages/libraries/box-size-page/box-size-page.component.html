@@ -1,0 +1,125 @@
+<section class="page">
+
+    <!--<div class="srcryBox testBox"></div>-->
+
+    <p>Box Size Library</p>
+    
+    <p>
+        A Box Size consists of 3 parts which are size, scale and speed.  All together there’s 9 sizes each with 2 scales and 11 speeds which gives a total of 198 preset responsive sizes to choose from.  The 9 sizes are micro, xTiny, tiny, xSmall, small, loMed, hiMed,  large and jumbo. The syntax for using them in your code is --[size]-[scale]-[speed] which you can see in the example below.
+    </p>
+    
+    <p>
+        //// Example of box sizes being used as plain height and width
+    </p>
+    
+    <responsive-shell
+        [ComponentInjector]="SizeDemo"
+        [DataChannelName]="'boxSizeChannel'"
+        [DataChannelType]="'boxStyleA'"
+        [WindowSizeReadoutToggle]="true"
+        [StartWidth]="'var(--loMed-2-1)'"
+        [StartHeight]="'var(--small-1-1)'"
+    >
+
+        <size-demo-control
+            controlFrame
+            class="analyzer"
+            [Size]="SizeDemoSizeSettingA"
+            [DataChannel]="'boxSizeChannelA'"
+            [DataChannelType]="'boxStyleA'"
+            [InitChannelData]="LoadedChannel"
+            (ChannelData)="postData($event)"
+        ></size-demo-control>
+
+    </responsive-shell>
+    
+    <responsive-shell
+        [ComponentInjector]="SizeDemo"
+        [DataChannelName]="'boxSizeChannel'"
+        [DataChannelType]="'boxStyleB'"
+        [WindowSizeReadoutToggle]="true"
+        [StartWidth]="'var(--loMed-2-1)'"
+        [StartHeight]="'var(--small-1-1)'"
+    >
+
+        <size-demo-control
+            controlFrame
+            class="analyzer"
+            [Size]="SizeDemoSizeSettingB"
+            [DataChannel]="'boxSizeChannelB'"
+            [DataChannelType]="'boxStyleB'"
+            [InitChannelData]="LoadedChannel"
+            (ChannelData)="postData($event)"
+        ></size-demo-control>
+
+    </responsive-shell>
+    
+    <responsive-shell
+        [ComponentInjector]="SizeDemo"
+        [DataChannelName]="'boxSizeChannel'"
+        [DataChannelType]="'boxStyleC'"
+        [WindowSizeReadoutToggle]="true"
+        [StartWidth]="'var(--loMed-2-1)'"
+        [StartHeight]="'var(--small-1-1)'"
+    >
+
+        <size-demo-control
+            controlFrame
+            class="analyzer"
+            [Size]="SizeDemoSizeSettingC"
+            [DataChannel]="'boxSizeChannelC'"
+            [DataChannelType]="'boxStyleC'"
+            [InitChannelData]="LoadedChannel"
+            (ChannelData)="postData($event)"
+        ></size-demo-control>
+
+    </responsive-shell>
+    
+    <p>
+        These sizes are a combination of an exact pixel size plus a proportional size of the screen which makes &#34;small&#34; or &#34;large&#34; more of a relative size than an exact size.  The 2 scales splits the &#34;relative range&#34; of a size into 2 sizes allowing you to start from the lower end by using scale 1 or the higher end with scale 2.  The speed adds a growth rate to the element to make it scale up at whatever rate you want it to expand.  To make this easier to understand visually play with the demo below.
+    </p>
+    
+    <p>
+        ////  Demo of all variations of one size
+    </p>
+
+    <responsive-shell
+        [ComponentInjector]="VariationDemo"
+        [WindowSizeReadoutToggle]="true"
+        [StartHeight]="'var(--loMed-1-2)'"
+        [StartWidth]="'var(--loMed-1-2)'"
+        [DataChannelName]="'boxSizeChannel'"
+        [DataChannelType]="'variantA'"
+    >
+        <div analyzerFrame class="analyzer"></div>
+
+        <variant-control
+            controlFrame
+            class="controlFrame"
+            [InitChannelData]="LoadedChannel"
+            [TargetName]="'variantA'"
+            [BoxSizes]="VariantAdata"
+            (SetSize)="postData($event)"
+        ></variant-control>
+    </responsive-shell>
+    
+    <p>
+        As you can see the lower the speed the less the element grows when you expand the screen while the higher the speed the more it expands as the screen expands.  As already mentioned each box size has a static pixel value at their core which the chart below outlines to help you better understand the range they cover.
+    </p>
+    
+    <p>
+        ////  Chart of core pixel valules of box sizes 
+    </p>
+    
+    <size-chart></size-chart>
+    
+    <p>
+        Of course this chart isn&#39;t going to magically burn itself into your memory so one rule of thumb is to remember how the lowest speed has the minimal amount of growth so when in doubt you can just set the speed to 1 on any given size and scale and just view it in the inspector.  But that&#39;s enough about the box sizes for now, lets talk about the Measuring Tape Library.
+    </p>
+    
+    <article>
+        <button (click)="previousPage()">Previous</button>
+        <button (click)="nextPage()">Next</button>
+    </article>
+    
+</section>

@@ -1,0 +1,9 @@
+<p>--baseSize-h-nudgeAmount</p>
+<nudge-amount
+    [DefaultSelection]="Size"
+    (UpdateSelection)="updateSize($event)"
+></nudge-amount>
+<article>
+    <button type="button" (click)="saveSelection()">save</button>
+    <button type="button" (click)="cancelSelection()">cancel</button>
+</article>

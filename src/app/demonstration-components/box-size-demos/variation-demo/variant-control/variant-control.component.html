@@ -1,0 +1,51 @@
+<section class="readout">
+    <article>
+        <p>
+            Full Width : {{BoxSizes.fullWidth}}px
+        </p>
+        <p>
+            Core Width : {{BoxSizes.coreWidth}}px
+        </p>
+        <p>
+            Growth Amount : {{BoxSizes.remainderWidth}}px
+        </p>
+    </article>
+    
+    <section class="controlShell">
+        <article>
+            <p class="buttonTitle">size</p>
+            <article>
+                <button class="button" [ngClass]="Size === 'micro' ? 'active' : 'inactive'" type="button" (click)="setSize('micro')">micro</button>
+                <button class="button" [ngClass]="Size === 'xTiny' ? 'active' : 'inactive'" type="button" (click)="setSize('xTiny')">xTiny</button>
+                <button class="button" [ngClass]="Size === 'tiny' ? 'active' : 'inactive'" type="button" (click)="setSize('tiny')">tiny</button>
+                <button class="button" [ngClass]="Size === 'xSmall' ? 'active' : 'inactive'" type="button" (click)="setSize('xSmall')">xSmall</button>
+                <button class="button" [ngClass]="Size === 'small' ? 'active' : 'inactive'" type="button" (click)="setSize('small')">small</button>
+                <button class="button" [ngClass]="Size === 'loMed' ? 'active' : 'inactive'" type="button" (click)="setSize('loMed')">loMed</button>
+                <button class="button" [ngClass]="Size === 'hiMed' ? 'active' : 'inactive'" type="button" (click)="setSize('hiMed')">hiMed</button>
+                <button class="button" [ngClass]="Size === 'large' ? 'active' : 'inactive'" type="button" (click)="setSize('large')">large</button>
+                <button class="button" [ngClass]="Size === 'jumbo' ? 'active' : 'inactive'" type="button" (click)="setSize('jumbo')">jumbo</button>
+            </article>
+        </article>
+        
+        <article>
+            <p class="buttonTitle">scale</p>
+            <button class="button" [ngClass]="Scale === '1' ? 'active' : 'inactive'" type="button" (click)="setScale('1')">1</button>
+            <button class="button" [ngClass]="Scale === '2' ? 'active' : 'inactive'" type="button" (click)="setScale('2')">2</button>
+        </article>
+        
+        <article>
+            <p class="buttonTitle">speed</p>
+            <button class="button unavailable" type="button">1</button>
+            <button class="button" [ngClass]="Speed === '2' ? 'active' : 'inactive'" type="button" (click)="setSpeed('2')">2</button>
+            <button class="button" [ngClass]="Speed === '3' ? 'active' : 'inactive'" type="button" (click)="setSpeed('3')">3</button>
+            <button class="button" [ngClass]="Speed === '4' ? 'active' : 'inactive'" type="button" (click)="setSpeed('4')">4</button>
+            <button class="button" [ngClass]="Speed === '5' ? 'active' : 'inactive'" type="button" (click)="setSpeed('5')">5</button>
+            <button class="button" [ngClass]="Speed === '6' ? 'active' : 'inactive'" type="button" (click)="setSpeed('6')">6</button>
+            <button class="button" [ngClass]="Speed === '7' ? 'active' : 'inactive'" type="button" (click)="setSpeed('7')">7</button>
+            <button class="button" [ngClass]="Speed === '8' ? 'active' : 'inactive'" type="button" (click)="setSpeed('8')">8</button>
+            <button class="button" [ngClass]="Speed === '9' ? 'active' : 'inactive'" type="button" (click)="setSpeed('9')">9</button>
+            <button class="button" [ngClass]="Speed === '10' ? 'active' : 'inactive'" type="button" (click)="setSpeed('10')">10</button>
+            <button class="button" [ngClass]="Speed === '11' ? 'active' : 'inactive'" type="button" (click)="setSpeed('11')">11</button>
+        </article>
+    </section>
+</section>

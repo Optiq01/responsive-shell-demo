@@ -1,0 +1,13 @@
+@import url('../../../srcry.css');
+
+/*:host{
+    display: grid;
+}*/
+
+.textshell{
+    display: grid;
+    grid-auto-rows: auto;
+    grid-gap: var(--mt-13);
+    width: 100%;
+    height: auto;
+}

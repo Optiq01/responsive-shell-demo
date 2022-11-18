@@ -1,0 +1,10 @@
+<section class="mainShell">
+
+    <size-output [Size]="Props.baseSizeCore" [Title]="'Core Size'"></size-output>
+    
+    <size-output [Size]="Props.baseSizeNudge" [Title]="'Nudge Size'"></size-output>
+    
+    <!--<size-output [Size]="Props.elementSize" [Title]="'Element Size'"></size-output>-->
+    <element-size-analyzer [Size]="Props.elementSize" [Behaviors]="Props.currentBehavior"></element-size-analyzer>
+    
+</section>

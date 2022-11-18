@@ -1,0 +1,38 @@
+<section class="shell">
+
+    <ng-content select="[analyzerFrame]"></ng-content>
+
+    <!--<analyzer-window class="analyzer"></analyzer-window>-->
+    
+    <screen-dimension-readout
+        *ngIf="WindowSizeReadoutToggle"
+        class="screenReadout"
+        [Size]="WindowDimensions"
+    ></screen-dimension-readout>
+    
+    <article
+        class="iFrameShell"
+        #resizeFrame
+        waResizeBox="content-box"
+        (waResizeObserver)="sizeListener($any($event))"
+    >
+
+        <iframe #responsiveWindow id="responsiveWindow" class="iFrame"></iframe>
+        <!--<responsive-window [Dimensions]="WindowDimensions"></responsive-window>-->
+    
+        <!--<object *ngIf="ToggleIFrame" [data]="URL" width="100%" height="100%"></object>
+        <object *ngIf="!ToggleIFrame" [data]="URL" width="100%" height="100%"></object>-->
+
+        <!--<iframe #responsiveWindow id="responsiveWindow" class="iFrame" sandbox="allow-same-origin"></iframe>-->
+        <!--<iframe *ngIf="!ToggleIFrame" #responsiveWindow class="iFrame" [attr.src]="URL"></iframe>-->
+    </article>
+
+</section>
+
+<property-dashboard class="propertyDash"></property-dashboard>
+
+<!--<div class="srcryBox someDiv"></div>
+<div #tinker class="tinker"></div>-->
+<!--<p>{{TestData | json}}</p>-->
+<!--<p>responsive-shell works!</p>
+<div class="srcryBox testBox" [style]="Styles"></div>-->

@@ -1,0 +1,10 @@
+<article class="primativeShell">
+    <p class="primativeTitle">amount</p>
+        <input
+            type="number"
+            [min]="Range.min"
+            [max]="Range.max"
+            [value]="Amount"
+            (change)="updateSelection($any($event.target).value)"
+        />
+</article>

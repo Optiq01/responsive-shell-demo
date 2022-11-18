@@ -1,0 +1,18 @@
+:host{
+    display: grid;
+    place-items: center;
+}
+
+.mainShell{
+    display: grid;
+    --crushGap-w: var(--mt-9);
+    --baseSize-w: var(--small-1-5);
+    --edgeChase-w: var(--loMed-1-1);
+    --chaseStop-w: var(--loMed-2-4);
+
+    font-size: var(--text-widget-2);
+    color: #fff;
+    padding: var(--micro-1-3) 0;
+
+    /*background-color: blanchedalmond;*/
+}

@@ -1,0 +1,21 @@
+:host{
+    display: grid;
+    width: 100%;
+    place-items: center;
+}
+
+.mainShell{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-row-gap: var(--mt-9);
+}
+
+.tabShell{
+    display: grid;
+    grid-template-columns: repeat(6 var(--tiny-1-7));
+    grid-column-gap: var(--mt-11);
+    grid-auto-flow: column;
+    text-align: center;
+    place-self: center;
+}

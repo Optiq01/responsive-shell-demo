@@ -1,0 +1,108 @@
+<section class="propertyShell">
+
+    <article class="widthDash">
+
+        <section *ngIf="!SettingToggleW" class="widthShell">
+    
+            <p class="sizeShellTitle">width settings</p>
+            
+            <srcry-field
+                [Param]="'edgeChase-w'"
+                [Value]="EdgeChaseW"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'edgeChase-w-nudgeScale'"
+                [Value]="EdgeChaseWNudgeScale"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'edgeChase-w-nudgeAmount'"
+                [Value]="EdgeChaseWNudgeAmount"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+    
+        </section>
+
+        <section *ngIf="SettingToggleW" class="widthSettingShell">
+
+            <edge-chase-w-input
+                *ngIf="SettingEditor === 'edgeChase-w'"
+                [DefaultSize]="EdgeChaseWSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></edge-chase-w-input>
+
+            <edge-chase-w-nudge-scale-input
+                *ngIf="SettingEditor === 'edgeChase-w-nudgeScale'"
+                [DefaultSize]="EdgeChaseWNudgeScaleSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></edge-chase-w-nudge-scale-input>
+
+            <edge-chase-w-nudge-amount-input
+                *ngIf="SettingEditor === 'edgeChase-w-nudgeAmount'"
+                [DefaultSize]="EdgeChaseWNudgeAmountSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></edge-chase-w-nudge-amount-input>
+
+        </section>
+
+    </article>
+    
+
+
+
+    <article class="heightDash">
+
+        <section *ngIf="!SettingToggleH" class="heightShell">
+
+            <p class="sizeShellTitle">height settings</p>
+    
+            <srcry-field
+                [Param]="'edgeChase-h'"
+                [Value]="EdgeChaseH"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'edgeChase-h-nudgeScale'"
+                [Value]="EdgeChaseHNudgeScale"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'edgeChase-h-nudgeAmount'"
+                [Value]="EdgeChaseHNudgeAmount"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+        </section>
+
+        <section *ngIf="SettingToggleH" class="heightSettingShell">
+    
+            <edge-chase-h-input
+                *ngIf="SettingEditor === 'edgeChase-h'"
+                [DefaultSize]="EdgeChaseHSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></edge-chase-h-input>
+    
+            <edge-chase-h-nudge-scale-input
+                *ngIf="SettingEditor === 'edgeChase-h-nudgeScale'"
+                [DefaultSize]="EdgeChaseHNudgeScaleSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></edge-chase-h-nudge-scale-input>
+    
+            <edge-chase-h-nudge-amount-input
+                *ngIf="SettingEditor === 'edgeChase-h-nudgeAmount'"
+                [DefaultSize]="EdgeChaseHNudgeAmountSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></edge-chase-h-nudge-amount-input>
+    
+        </section>
+
+    </article>
+
+
+</section>

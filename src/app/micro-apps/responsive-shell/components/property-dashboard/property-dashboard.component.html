@@ -1,0 +1,24 @@
+<section class="mainShell">
+    <article class="tabShell" *ngIf="Tabs !== undefined && Tabs.length > 0">
+        <a
+            *ngFor="let tab of Tabs"
+            class="tab"
+            (click)="setCurrentTab(tab.path)"
+        >{{tab.name}}</a>
+    </article>
+    <article class="widgetShell">
+
+        <crush-gap-widget *ngIf="CurrentTab === 'crush-gap'"></crush-gap-widget>
+        <base-size-widget *ngIf="CurrentTab === 'base-size'"></base-size-widget>
+        <edge-chase-widget *ngIf="CurrentTab === 'edge-chase'"></edge-chase-widget>
+        <chase-stop-widget *ngIf="CurrentTab === 'chase-stop'"></chase-stop-widget>
+        <squish-growth-widget *ngIf="CurrentTab === 'squish-growth'"></squish-growth-widget>
+        <stretch-shrink-widget *ngIf="CurrentTab === 'stretch-shrink'"></stretch-shrink-widget>
+
+    </article>
+</section>
+
+
+<!--<p>property-dashboard works!</p>
+<button (click)="someDispatch()" type="button">click me</button>
+<p>{{BaseSizeW$ | async | json}}</p>-->

@@ -1,0 +1,34 @@
+:host{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-row-gap: var(--mt-2);
+    width: 100%;
+}
+
+.titleShell{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.lineTitle{
+    grid-area: 1/1/2/2;
+    display: block;
+}
+
+.lineBox{
+    grid-area: 2/1/3/2;
+    display:block;
+    width: calc(100% - var(--mt-7));
+    height: 0px;
+    justify-self:left;
+    align-self: center;
+    border-top-color: blueviolet;
+    border-top-style: solid;
+}
+
+.reader{
+    display: block;
+    height: 0px;
+    opacity: 0;
+}

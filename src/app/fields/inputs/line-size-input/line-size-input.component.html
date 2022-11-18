@@ -1,0 +1,11 @@
+<article class="inputShell">
+    <line-size
+        [DefaultSelection]="DefaultSelection?.size"
+        (UpdateSelection)="updateSize($event)"
+    ></line-size>
+
+    <line-speed
+        [DefaultSelection]="DefaultSelection?.speed"
+        (UpdateSelection)="updateSpeed($event)"
+    ></line-speed>
+</article>

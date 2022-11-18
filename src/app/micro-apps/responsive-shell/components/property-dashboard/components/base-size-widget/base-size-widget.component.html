@@ -1,0 +1,109 @@
+<section class="propertyShell">
+
+    <article class="widthDash">
+
+        <section *ngIf="!SettingToggleW" class="widthShell">
+    
+            <p class="sizeShellTitle">width settings</p>
+            
+            <srcry-field
+                [Param]="'baseSize-w'"
+                [Value]="BaseSizeW"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'baseSize-w-nudgeScale'"
+                [Value]="BaseSizeWNudgeScale"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'baseSize-w-nudgeAmount'"
+                [Value]="BaseSizeWNudgeAmount"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+    
+        </section>
+
+        <section *ngIf="SettingToggleW" class="widthSettingShell">
+
+            <base-w-size-input
+                *ngIf="SettingEditor === 'baseSize-w'"
+                [DefaultSize]="BaseSizeWSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></base-w-size-input>
+
+            <base-size-w-nudge-scale-input
+                *ngIf="SettingEditor === 'baseSize-w-nudgeScale'"
+                [DefaultSize]="BaseSizeWNudgeScaleSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></base-size-w-nudge-scale-input>
+
+            <base-size-w-nudge-amount-input
+                *ngIf="SettingEditor === 'baseSize-w-nudgeAmount'"
+                [DefaultSize]="BaseSizeWNudgeAmountSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></base-size-w-nudge-amount-input>
+
+        </section>
+
+    </article>
+    
+
+
+
+    <article class="heightDash">
+
+        <section *ngIf="!SettingToggleH" class="heightShell">
+
+            <p class="sizeShellTitle">height settings</p>
+    
+            <srcry-field
+                [Param]="'baseSize-h'"
+                [Value]="BaseSizeH"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'baseSize-h-nudgeScale'"
+                [Value]="BaseSizeHNudgeScale"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'baseSize-h-nudgeAmount'"
+                [Value]="BaseSizeHNudgeAmount"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+        </section>
+
+        <section *ngIf="SettingToggleH" class="heightSettingShell">
+    
+            <base-size-h-input
+                *ngIf="SettingEditor === 'baseSize-h'"
+                [DefaultSize]="BaseSizeHSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></base-size-h-input>
+    
+            <base-size-h-nudge-scale-input
+                *ngIf="SettingEditor === 'baseSize-h-nudgeScale'"
+                [DefaultSize]="BaseSizeHNudgeScaleSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></base-size-h-nudge-scale-input>
+    
+            <base-size-h-nudge-amount-input
+                *ngIf="SettingEditor === 'baseSize-h-nudgeAmount'"
+                [DefaultSize]="BaseSizeHNudgeAmountSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></base-size-h-nudge-amount-input>
+    
+        </section>
+
+    </article>
+
+
+</section>
+<!--<section class="outputFrame"></section>-->

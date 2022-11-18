@@ -1,0 +1,157 @@
+<section class="propertyShell">
+
+    <article class="widthDash">
+
+        <section *ngIf="!SettingToggleW" class="widthShell">
+    
+            <p class="sizeShellTitle">width settings</p>
+            
+            <srcry-field
+                [Param]="'squishGrowth-w-start'"
+                [Value]="SquishGrowthWStart"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'squishGrowth-w-speed'"
+                [Value]="SquishGrowthWSpeed"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'squishGrowth-w-max'"
+                [Value]="SquishGrowthWMax"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'squishGrowth-w-max-nudgeScale'"
+                [Value]="SquishGrowthWMaxNudgeScale"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'squishGrowth-w-max-nudgeAmount'"
+                [Value]="SquishGrowthWMaxNudgeAmount"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+    
+        </section>
+
+        <section *ngIf="SettingToggleW" class="widthSettingShell">
+
+            <squish-growth-w-start-input
+                *ngIf="SettingEditor === 'squishGrowth-w-start'"
+                [DefaultSize]="SquishGrowthWStartSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></squish-growth-w-start-input>
+            
+            <squish-growth-w-speed-input
+                *ngIf="SettingEditor === 'squishGrowth-w-speed'"
+                [DefaultSize]="SquishGrowthWSpeedSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></squish-growth-w-speed-input>
+
+            <squish-growth-w-max-input
+                *ngIf="SettingEditor === 'squishGrowth-w-max'"
+                [DefaultSize]="SquishGrowthWMaxSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></squish-growth-w-max-input>
+
+            <squish-growth-w-max-nudge-scale-input
+                *ngIf="SettingEditor === 'squishGrowth-w-max-nudgeScale'"
+                [DefaultSize]="SquishGrowthWMaxNudgeScaleSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></squish-growth-w-max-nudge-scale-input>
+            
+            <squish-growth-w-max-nudge-amount-input
+                *ngIf="SettingEditor === 'squishGrowth-w-max-nudgeAmount'"
+                [DefaultSize]="SquishGrowthWMaxNudgeAmountSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></squish-growth-w-max-nudge-amount-input>
+
+        </section>
+
+    </article>
+    
+
+
+
+    <article class="heightDash">
+
+        <section *ngIf="!SettingToggleH" class="heightShell">
+
+            <p class="sizeShellTitle">height settings</p>
+    
+            <srcry-field
+                [Param]="'squishGrowth-h-start'"
+                [Value]="SquishGrowthHStart"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'squishGrowth-h-speed'"
+                [Value]="SquishGrowthHSpeed"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'squishGrowth-h-max'"
+                [Value]="SquishGrowthHMax"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'squishGrowth-h-max-nudgeScale'"
+                [Value]="SquishGrowthHMaxNudgeScale"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'squishGrowth-h-max-nudgeAmount'"
+                [Value]="SquishGrowthHMaxNudgeAmount"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+
+        </section>
+
+        <section *ngIf="SettingToggleH" class="heightSettingShell">
+    
+            <squish-growth-h-start-input
+                *ngIf="SettingEditor === 'squishGrowth-h-start'"
+                [DefaultSize]="SquishGrowthHStartSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></squish-growth-h-start-input>
+            
+            <squish-growth-h-speed-input
+                *ngIf="SettingEditor === 'squishGrowth-h-speed'"
+                [DefaultSize]="SquishGrowthHSpeedSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></squish-growth-h-speed-input>
+
+            <squish-growth-h-max-input
+                *ngIf="SettingEditor === 'squishGrowth-h-max'"
+                [DefaultSize]="SquishGrowthHMaxSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></squish-growth-h-max-input>
+
+            <squish-growth-h-max-nudge-scale-input
+                *ngIf="SettingEditor === 'squishGrowth-h-max-nudgeScale'"
+                [DefaultSize]="SquishGrowthHMaxNudgeScaleSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></squish-growth-h-max-nudge-scale-input>
+            
+            <squish-growth-h-max-nudge-amount-input
+                *ngIf="SettingEditor === 'squishGrowth-h-max-nudgeAmount'"
+                [DefaultSize]="SquishGrowthHMaxNudgeAmountSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></squish-growth-h-max-nudge-amount-input>
+    
+        </section>
+
+    </article>
+
+
+</section>

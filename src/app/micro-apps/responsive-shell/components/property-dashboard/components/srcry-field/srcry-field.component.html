@@ -1,0 +1,13 @@
+<p class="propShell">--{{Param}}</p>
+
+<p class="colonShell">&#58;</p>
+
+<p *ngIf="ValueType && Value !=='unset'" class="valueShell" (click)="updateSelection()">
+    <span class="VarText">var&#40;</span>
+    <span class="ValueText">--{{Value}}</span>
+    <span class="varText">&#41;&#59;</span>
+</p>
+
+<p *ngIf="Value === 'unset'" class="ValueShell">{{Value}}&#59;</p>
+
+<p *ngIf="!ValueType" class="valueShell" (click)="updateSelection()">{{Value}}&#59;</p>

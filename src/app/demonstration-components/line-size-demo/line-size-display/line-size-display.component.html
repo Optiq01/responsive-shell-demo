@@ -1,0 +1,12 @@
+<article class="titleShell">
+
+    <p class="lineTitle">
+        {{Size}}
+    </p>
+    <p *ngIf="ShowSize">{{LineSize}}</p>
+
+</article>
+
+<div class="lineBox" [style.border-top-width]="LineThickness"></div>
+
+<div #reader class="reader" [style.width]="LineThickness"></div>

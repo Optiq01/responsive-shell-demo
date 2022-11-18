@@ -1,0 +1,72 @@
+<p>Getting Started</p>
+
+<section>
+    <article>
+        <p>
+            Srcry is a css utility that introduces a means of behavioral scaling to responsive design. As the Internet evolved, we had to grow with it by focusing less on the exact sizes of our elements and more on the way it should transition from one size and sometimes shape to another across various screens.  It’s safe to say responsive design is organically becoming more and more of a type of “animation programming” in its’ own unique right with all the varying factors we have to tame about our elements to achieve the desired results.  We as developers need tools that help us adapt to this new form of animation to keep our HTML flexible.
+        </p>
+
+        <p>
+            Srcry provides 5 different size libraries and 2 configuration classes with custom properties for programming the scaling behavior of your elements.  There’s no shortage of awesome UI libraries at our disposal so you won’t be seeing any of that here.  The goal of this project is to provide an approachable means of creating complex scaling behaviors simply by defining a few properties which can be applied to any UI library that allows you to customize your own sizes.  The frame below demonstrates the type of responsive behavior that can be achieved using srcry.
+        </p>
+
+        <p>
+            //// Demo of a srcryBox element to show how it scales
+        </p>
+        <responsive-shell
+            [ComponentInjector]="SrcryBoxDemo"
+            [WindowSizeReadoutToggle]="true"
+            [IframePath]="'srcry-box-demo'"
+            [StartWidth]="'var(--loMed-2-1)'"
+            [StartHeight]="'var(--small-1-1)'"
+        ></responsive-shell>
+        
+        <p>
+            This demonstration doesn&#39;t do anything practical as it&#39;s just a demonstration, but the scaling behavior you just saw didn&#39;t require a single media query thanks to the srcryBox configuration class.  All you need to do is add the srcryBox class to your HTML element and define the properties in your own css class and the srcryBox handles the rest.
+        </p>
+        
+        <p>
+            Srcry provides another configuration class called srcryTxt which allows you to control the typography of your text responsively which makes your content that much more pleasing for the eye to reason about.  The example below demonstrates how these work together.
+        </p>
+        
+        <p>
+            //// Demo of srcryText settings
+        </p>
+        
+        <responsive-shell
+            [ComponentInjector]="TextSizeDemo"
+            [WindowSizeReadoutToggle]="false"
+            [IframePath]="'text-size-demo'"
+            [StartWidth]="'var(--hiMed-1-1)'"
+            [StartHeight]="'var(--hiMed-1-1)'"
+        ></responsive-shell>
+
+        <p>
+            We&#39;ve even created responsive line thicknesses.
+        </p>
+
+        <p>
+            //// Demo of line thicknesses
+        </p>
+
+        <responsive-shell
+            [ComponentInjector]="LineSizeDemo"
+            [DataChannelName]="'lineSizeChannel'"
+            [IframePath]="'line-size-demo'"
+            [WindowSizeReadoutToggle]="false"
+            [StartWidth]="'var(--hiMed-1-4)'"
+            [StartHeight]="'var(--hiMed-1-8)'"
+        ></responsive-shell>
+
+        <p>
+            This is all made possible through the use of our sizing libraries which are covered HERE but before we go into that lets talk a little more about our approach to responsive design to help you better understand how to go about using it.
+        </p>
+    </article>
+
+    <div class="testDiv"></div>
+
+    <article>
+        <button (click)="nextPage()">Next</button>
+    </article>
+
+</section>

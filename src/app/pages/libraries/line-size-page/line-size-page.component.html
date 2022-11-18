@@ -1,0 +1,24 @@
+<section class="pageShell">
+
+    <p>Line Size Library</p>
+
+    <p>
+        The line size library consists of 7 sizes with 6 speeds giving you a total of 42 settings.  The sizes are ultraFine, fine, narrow, semiBold, bold, wide and ultraWide.  The syntax for using a line size is --[size]-[speed] just like the syntax for using a text size.  The window below shows how the line sizes scale.
+    </p>
+
+    <p>
+        ////  Demo of line sizes
+    </p>
+
+    <responsive-shell
+        [ComponentInjector]="LineSizeDemo"
+        [StartWidth]="'var(--loMed-2-3'"
+        [StartHeight]="'var(--hiMed-1-4)'"
+    ></responsive-shell>
+
+    <article>
+        <button (click)="previousPage()">Previous</button>
+        <button (click)="nextPage()">Next</button>
+    </article>
+
+</section>

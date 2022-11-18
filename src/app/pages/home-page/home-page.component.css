@@ -1,0 +1,29 @@
+:host{
+    display: grid;
+    place-items: center;
+    grid-row-gap: var(--xTiny-1-7);
+    height: 100vh;
+}
+
+.testingShell{
+    display: grid;
+    place-items: center;
+    background-color: orange;
+    width: 77%;
+}
+
+.childElement{
+    display: block;
+    --baseSize-w: 100%;
+    --baseSize-h: 100%;
+    --bleed-scale: var(--micro-2-5);
+    --bleed-amt: 1;
+    background-color: blue;
+}
+
+.myClass{
+    --text-size: var(--text-article-4);
+    --text-nudge-amt: 3;
+    --kerning-nudge-amt: 6;
+    --leading-nudge-amt: 11;
+}

@@ -1,0 +1,157 @@
+<section class="propertyShell">
+
+    <article class="widthDash">
+
+        <section *ngIf="!SettingToggleW" class="widthShell">
+    
+            <p class="sizeShellTitle">width settings</p>
+            
+            <srcry-field
+                [Param]="'stretchShrink-w-start'"
+                [Value]="StretchShrinkWStart"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'stretchShrink-w-speed'"
+                [Value]="StretchShrinkWSpeed"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'stretchShrink-w-min'"
+                [Value]="StretchShrinkWMin"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'stretchShrink-w-min-nudgeScale'"
+                [Value]="StretchShrinkWMinNudgeScale"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'stretchShrink-w-min-nudgeAmount'"
+                [Value]="StretchShrinkWMinNudgeAmount"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+    
+        </section>
+
+        <section *ngIf="SettingToggleW" class="widthSettingShell">
+
+            <stretch-shrink-w-start-input
+                *ngIf="SettingEditor === 'stretchShrink-w-start'"
+                [DefaultSize]="StretchShrinkWStartSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></stretch-shrink-w-start-input>
+            
+            <stretch-shrink-w-speed-input
+                *ngIf="SettingEditor === 'stretchShrink-w-speed'"
+                [DefaultSize]="StretchShrinkWSpeedSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></stretch-shrink-w-speed-input>
+
+            <stretch-shrink-w-min-input
+                *ngIf="SettingEditor === 'stretchShrink-w-min'"
+                [DefaultSize]="StretchShrinkWMinSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></stretch-shrink-w-min-input>
+
+            <stretch-shrink-w-min-nudge-scale-input
+                *ngIf="SettingEditor === 'stretchShrink-w-min-nudgeScale'"
+                [DefaultSize]="StretchShrinkWMinNudgeScaleSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></stretch-shrink-w-min-nudge-scale-input>
+            
+            <stretch-shrink-w-min-nudge-amount-input
+                *ngIf="SettingEditor === 'stretchShrink-w-min-nudgeAmount'"
+                [DefaultSize]="StretchShrinkWMinNudgeAmountSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></stretch-shrink-w-min-nudge-amount-input>
+
+        </section>
+
+    </article>
+    
+
+
+
+    <article class="heightDash">
+
+        <section *ngIf="!SettingToggleH" class="heightShell">
+
+            <p class="sizeShellTitle">height settings</p>
+    
+            <srcry-field
+                [Param]="'stretchShrink-h-start'"
+                [Value]="StretchShrinkHStart"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'stretchShrink-h-speed'"
+                [Value]="StretchShrinkHSpeed"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'stretchShrink-h-min'"
+                [Value]="StretchShrinkHMin"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'stretchShrink-h-min-nudgeScale'"
+                [Value]="StretchShrinkHMinNudgeScale"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'stretchShrink-h-min-nudgeAmount'"
+                [Value]="StretchShrinkHMinNudgeAmount"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+
+        </section>
+
+        <section *ngIf="SettingToggleH" class="heightSettingShell">
+    
+            <stretch-shrink-h-start-input
+                *ngIf="SettingEditor === 'stretchShrink-h-start'"
+                [DefaultSize]="StretchShrinkHStartSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></stretch-shrink-h-start-input>
+            
+            <stretch-shrink-h-speed-input
+                *ngIf="SettingEditor === 'stretchShrink-h-speed'"
+                [DefaultSize]="StretchShrinkHSpeedSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></stretch-shrink-h-speed-input>
+
+            <stretch-shrink-h-min-input
+                *ngIf="SettingEditor === 'stretchShrink-h-min'"
+                [DefaultSize]="StretchShrinkHMinSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></stretch-shrink-h-min-input>
+
+            <stretch-shrink-h-min-nudge-scale-input
+                *ngIf="SettingEditor === 'stretchShrink-h-min-nudgeScale'"
+                [DefaultSize]="StretchShrinkHMinNudgeScaleSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></stretch-shrink-h-min-nudge-scale-input>
+            
+            <stretch-shrink-h-min-nudge-amount-input
+                *ngIf="SettingEditor === 'stretchShrink-h-min-nudgeAmount'"
+                [DefaultSize]="StretchShrinkHMinNudgeAmountSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></stretch-shrink-h-min-nudge-amount-input>
+    
+        </section>
+
+    </article>
+
+
+</section>

@@ -1,0 +1,105 @@
+<section class="propertyShell">
+
+    <article class="widthDash">
+
+        <section *ngIf="!SettingToggleW" class="widthShell">
+
+            <p class="sizeShellTitle">width settings</p>
+
+            <srcry-field
+                [Param]="'chaseStop-w'"
+                [Value]="ChaseStopW"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'chaseStop-w-nudgeScale'"
+                [Value]="ChaseStopWNudgeScale"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'chaseStop-w-nudgeAmount'"
+                [Value]="ChaseStopWNudgeAmount"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'w')"
+            ></srcry-field>
+
+        </section>
+
+        <section *ngIf="SettingToggleW" class="widthSettingShell">
+
+            <chase-stop-w-input
+                *ngIf="SettingEditor === 'chaseStop-w'"
+                [DefaultSize]="ChaseStopWSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></chase-stop-w-input>
+
+            <chase-stop-w-nudge-scale-input
+                *ngIf="SettingEditor === 'chaseStop-w-nudgeScale'"
+                [DefaultSize]="ChaseStopWNudgeScaleSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></chase-stop-w-nudge-scale-input>
+
+            <chase-stop-w-nudge-amount-input
+                *ngIf="SettingEditor === 'chaseStop-w-nudgeAmount'"
+                [DefaultSize]="ChaseStopWNudgeAmountSetting"
+                (CloseFrame)="closeSettingFrame('w')"
+            ></chase-stop-w-nudge-amount-input>
+
+        </section>
+
+    </article>
+
+    <article class="heightDash">
+
+        <section *ngIf="!SettingToggleH" class="heightShell">
+
+            <p class="sizeShellTitle">height settings</p>
+
+            <srcry-field
+                [Param]="'chaseStop-h'"
+                [Value]="ChaseStopH"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'chaseStop-h-nudgeScale'"
+                [Value]="ChaseStopHNudgeScale"
+                [ValueType]="true"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+            <srcry-field
+                [Param]="'chaseStop-h-nudgeAmount'"
+                [Value]="ChaseStopHNudgeAmount"
+                [ValueType]="false"
+                (Selection)="openSettingFrame($event, 'h')"
+            ></srcry-field>
+
+        </section>
+
+        <section *ngIf="SettingToggleH" class="heightSettingShell">
+
+            <chase-stop-h-input
+                *ngIf="SettingEditor === 'chaseStop-h'"
+                [DefaultSize]="ChaseStopHSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></chase-stop-h-input>
+
+            <chase-stop-h-nudge-scale-input
+                *ngIf="SettingEditor === 'chaseStop-h-nudgeScale'"
+                [DefaultSize]="ChaseStopHNudgeScaleSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></chase-stop-h-nudge-scale-input>
+
+            <chase-stop-h-nudge-amount-input
+                *ngIf="SettingEditor === 'chaseStop-h-nudgeAmount'"
+                [DefaultSize]="ChaseStopHNudgeAmountSetting"
+                (CloseFrame)="closeSettingFrame('h')"
+            ></chase-stop-h-nudge-amount-input>
+
+        </section>
+
+    </article>
+
+</section>

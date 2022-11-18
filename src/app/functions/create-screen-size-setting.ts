@@ -1,0 +1,1 @@
+export function CreateScreenSize(start : number) : string { return `${start}px`; }

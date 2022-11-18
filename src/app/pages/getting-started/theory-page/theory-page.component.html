@@ -1,0 +1,108 @@
+<section>
+    <p>Behavioral Theory</p>
+
+    <article class="demoText">
+        <p>
+            As tech advances and more devices come to life the internet is going to become more broadly used across an even broader range of sizes.  Aside from having to make layouts that make use of the entire screen of a device, we have to think about certain use cases of our projects such as someone doing research with 5 browser windows open at once and your website is one of the windows being dragged and scaled at odd unforseeable sizes.  If we think about responsive design as it currently is in the context of an obstacle course we run through I&#39;m sure you can relate to the following points.
+        </p>
+
+        <ul>
+            <li>
+                At mobile to medium tablet sizes the elements only need to adapt subtly if at all.
+            </li>
+
+            <li>
+                At large tablet to small laptop sizes some elements need to make drastic jumps to stay proportionate with the screen size due to the subtleness of the mobile settings.
+            </li>
+
+            <li>
+                At medium laptop to large laptop and monitor sizes some elements start to dominate too much of the screen due to the increased scaling rate of the large tablet settings.
+            </li>
+
+            <li>
+                Every element has their own individual points in scaling where these issues occur.
+            </li>
+        </ul>
+
+        <p>
+            Seeing that this “obstacle course” is only going to acquire more obstacles over time, our approach to responsive design will only get more complex.  For as complex as our responsive needs can be they really narrow down into three core scaling behaviors which in srcry are being called Stationarym Reactive and Counter Reactive.
+        </p>
+
+        <p>
+            Stationary simply means an element remains the same size as the screen scales.  Reactive means the element scales as the screen scales, growign larger as the screen gets bigger and shrinking as the screen gets smaller.  Coutner Reactive means the element reacts against the scaling of the screen, meaning it shrinks as the screen grows and expands as the screen shrinks.
+        </p>
+
+        <p>
+            When you chain instances of these behaviors one after another you have a programmed pattern of activity that can be modified or changed as you wish to achieve the desired outcome.  The srcryBox and srcryTxt classes are called “configuration classes” because they privide the behavioral properties that allows you to chain these behaviors on your elements.  Besudes the behavioral properties there are additional properties that classify as “modifiers” as they serve to further fine tune their respective behavioral properties which we&#39;ll explore later on in the documentation.
+        </p>
+
+        <p>
+            the landscape; one of the biggest obstacles we&#39;ll face is aesthetics.  Sure we can make our elements scale to always fit on the screen and &#34;look right&#34; on the primary devices we&#39;re targeting.  But what about all those odd “in between” sizes we can&#39;t anticipate?  What about that new model of a popular smartphone that will be 2px larger than the &#34;appropriate&#34; media query for screens of that general size?  These are the points at which our layouts morph into something disproportionate and difficult to interract with on the user end.  Luckily for us nature already has a great sollution to help with that which is the golden ratio.
+        </p>
+
+        <p>
+            In a nutshell, the golden ratio is the portional ratio nature uses to design everything that exists, which is 1 : 1.6180339887498948.  It&#39;s easier to demonstrate than explain so lets use our wasp friend below to show how it works.
+        </p>
+
+        <article>
+        
+            <svg-photo class="svgPhotoFrame" [Data]="DemoA"></svg-photo>
+        
+            <equation-component [Equation]="DemoAEquation"></equation-component>
+
+            <p>
+                To make it easier to reason about lets say we blew an image up to make the wasp is 3 inches long which is the same as 77milimeters.  Starting with 77mm as our root size we divide it by the golden ratio which is 47.589 mm.  The remaining protion left over is 29.411 mm which is demonstrated below.
+            </p>
+    
+        </article>
+
+        <section>
+
+            <article>
+                <p>47.589</p>
+                <svg-photo class="svgPhotoFrame" [Data]="DemoB"></svg-photo>
+            </article>
+            
+            <article>
+                <p>29.411</p>
+                <svg-photo class="svgPhotoFrame" [Data]="DemoC"></svg-photo>
+            </article>
+        </section>
+
+        <p>
+            We can see already how these two portions match up to different parts of the wasp&#39;s body.  The 47.589mm portion is the distance from the bottom of the tail to the bottom of the upper torso as well as the length of the larger wings.  The 29.411mm portion is equal to the length of the smaller wing segments, the size of the torso and head and the length of its&#39; hind legs.
+        </p>
+
+        <p>
+            If we divide 29.411 mm by the golden ratio we get 18.177 mm which leaves a remaining chunk of 11.234 mm which matches up with more parts of the wasp&#39;s body.
+        </p>
+
+        <svg-photo class="svgPhotoFrame" [Data]="DemoD"></svg-photo>
+        <svg-photo class="svgPhotoFrame" [Data]="DemoE"></svg-photo>
+
+        <p>
+            Doing the same thing with 11.234 mm leaves with 6.943 mm and a remaining chunk of 4.291 mm.
+        </p>
+
+        <svg-photo class="svgPhotoFrame" [Data]="DemoF"></svg-photo>
+        <svg-photo class="svgPhotoFrame" [Data]="DemoG"></svg-photo>
+
+        <p>
+            We could continue exploring farther with smaller portions but I think you get the picture.  As you just saw, every part of this wasp&#39;s body is proportionate to the golden ratio.  The same is true for everything else in nature whether it be another bug, a plant, animal, star systems, literally everything.  Of course most people aren&#39;t consciously aware of this, however they are indeed highly sensitive to it subconsciously when determining if something in front of them is “real” or “fake”.  This innate knowing is the compass used to determine whether or not someone&#39;s artwork is percieved as &#34;amateur&#34; or &#34;professional&#34;.  If any elements are uot of portion people&#39;s instinct will be more inclined to consider it amateur because it doesn&#39;t match how they instinctively know nature would have done it.  Howver if all the portions are perfect it will be the exact same as if nature created it itself thus that artist musht be &#34;a professional&#34;.
+        </p>
+
+        <p>
+            So what if we could define the size of our elements with golden portions that naturally calculate themselves from the dimensions of the screen so even in the event of some device breaking our layout its still forced to do so in a way thats still proportionally perfect thus appearing as it would if nature built our apps and websites itself?  Vs. just being a broken layout that obstructs and imbalances the user experience?  That&#39;s exactly what the size libraries are designed to do which are covered in the next section.
+        </p>
+
+        <p>
+            So aside from providing a means of programming the scaling behavior of your elements, srcry uses the golden ratio to help with the aesthetics so you can achieve more flexible and balanced layouts.  That concludes this section so lets dive into the size libraries to get a better understanding for how they work together.
+        </p>
+    </article>
+
+
+    <article>
+        <button (click)="previousPage()">Previous</button>
+        <button (click)="nextPage()">Next</button>
+    </article>
+</section>

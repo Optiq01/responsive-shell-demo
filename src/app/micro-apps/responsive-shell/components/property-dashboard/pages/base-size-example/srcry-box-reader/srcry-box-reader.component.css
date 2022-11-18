@@ -1,0 +1,63 @@
+:host{
+    display: grid;
+    background-color: orange;
+    place-self: center;
+    width: var(--WidthEquation);
+    height: var(--HeightEquation);
+    overflow: hidden;
+}
+
+.hiddenShell{
+    grid-area: 1/1/2/2;
+    width: 1px;
+    height: 1px;
+    display: block;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.mainShell{
+    grid-area: 1/1/2/2;
+    display: grid;
+    /*width: var(--WidthMaster);
+    height: var(--HeightMaster);*/
+    background-color: green;
+}
+
+.reader{
+    grid-area: 1/1/2/2;
+    display: block;
+    place-self: center;
+    /*width: var(--baseSize-w-nudge-master);*/
+    height: 0px;
+}
+
+.baseSizeWnudge{
+    right: var(--baseSize-w-nudgeAmount);
+    left: var(--baseSize-w-nudgeScale);
+}
+
+.baseSizeHnudge{
+    right: var(--baseSize-h-nudgeAmount);
+    left: var(--baseSize-h-nudgeScale);
+}
+
+.edgeChaseWnudge{
+    right: var(--edgeChase-w-nudgeAmount);
+    left: var(--edgeChase-w-nudgeScale);
+}
+
+.edgeChaseHnudge{
+    right: var(--edgeChase-h-nudgeAmount);
+    left: var(--edgeChase-h-nudgeScale);
+}
+
+.chaseStopWnudge{
+    right: var(--chaseStop-w-nudgeAmount);
+    left: var(--chaseStop-w-nudgeScale);
+}
+
+.chaseStopHnudge{
+    right: var(--chaseStop-h-nudgeAmount);
+    left: var(--chaseStop-h-nudgeScale);
+}

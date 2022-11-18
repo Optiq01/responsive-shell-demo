@@ -1,0 +1,9 @@
+<p>--stretchShrink-h-max</p>
+<mt-size
+    [DefaultSelection]="Size"
+    (UpdateSelection)="updateSize($event)"
+></mt-size>
+<article>
+    <button type="button" (click)="saveSelection()">save</button>
+    <button type="button" (click)="cancelSelection()">cancel</button>
+</article>

@@ -1,0 +1,24 @@
+:host{
+    place-self: center;
+    display: grid;
+    grid-auto-rows: auto;
+    width: max-content;
+}
+
+.sizeShell{
+    display: grid;
+    grid-template-columns: var(--tiny-2-3) var(--tiny-1-7);
+    grid-auto-flow: column;
+    box-sizing: border-box;
+}
+
+.title{
+    border: var(--line-fine) solid black;
+    padding: var(--mt-2);
+}
+
+.size{
+    border: var(--line-fine) solid black;
+    padding: var(--mt-2);
+    text-align: center;
+}

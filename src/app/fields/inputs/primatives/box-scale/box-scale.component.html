@@ -1,0 +1,10 @@
+<article class="primativeShell">
+    <p class="primativeTitle">scale</p>
+    <select (change)="updateSelection($any($event.target).value)">
+        <option
+            *ngFor="let option of SizeOptions"
+            [selected]="checkForDefault(option)"
+            [value]="option"
+        >{{option}}</option>
+    </select>
+</article>

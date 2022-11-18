@@ -1,0 +1,17 @@
+.demoText{
+    /*fill: rgb(127, 129, 8);*/
+    font-size: var(--text-article-1);
+}
+
+.photo{
+    opacity: .55;
+}
+
+.marker{
+    --rotate: 0;
+    --origin-x: 0;
+    --origin-y: 0;
+    display: block;
+   /* transform-origin: var(--origin-x) var(--origin-y);*/
+    transform: rotate(30deg);
+}

@@ -1,0 +1,37 @@
+@import url('../../../../../../../srcry.css');
+
+:host{
+    grid-area: 1/1/2/2;
+    display: grid;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    place-items: center;
+    padding: 0;
+    box-sizing: border-box;
+    place-self: center;
+}
+
+.boxShell{
+    grid-area: 1/1/2/2;
+    display: grid;
+    background-color:cadetblue;
+    overflow: hidden;
+    --edgeWidth: calc(var(--baseSize-w-nudge-master) / 2);
+    --edgeHeight: calc(var(--baseSize-h-nudge-master) / 2);
+    grid-template-columns: minmax(auto, var(--edgeWidth)) auto minmax(auto, var(--edgeWidth));
+    grid-template-rows: minmax(auto, var(--edgeHeight)) auto minmax(auto, var(--edgeHeight));
+}
+
+.coreBox{
+    display: block;
+    grid-area: 2/2/3/3;
+    background-color: orange;
+}
+
+.reader{
+    grid-area: 2/2/3/3;
+    display: block;
+    opacity: 0;
+    height: 0;
+}

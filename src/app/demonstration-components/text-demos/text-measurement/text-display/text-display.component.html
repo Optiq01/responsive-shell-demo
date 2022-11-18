@@ -1,0 +1,9 @@
+<article class="titleShell">
+    <p class="title">{{Size}}</p>
+    <p class="readout">{{Readout}}<span class="pxShell">px</span></p>
+</article>
+
+<p [style.font-size]="TextSize">{{Text}}</p>
+
+<article #reader class="reader" [style.width]="TextSize">
+</article>

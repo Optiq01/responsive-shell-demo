@@ -1,0 +1,10 @@
+<p>--stretchShrink-w-speed</p>
+<input
+    type="number"
+    [value]="Size"
+    (change)="updateSize($any($event.target).value)"
+/>
+<article>
+    <button type="button" (click)="saveSelection()">save</button>
+    <button type="button" (click)="cancelSelection()">cancel</button>
+</article>

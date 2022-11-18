@@ -1,0 +1,9 @@
+.demoText{
+    font-size: var(--text-article-1);
+}
+
+.svgPhotoFrame{
+    display: block;
+    width: var(--loMed-1-7);
+    height: var(--loMed-1-7);
+}

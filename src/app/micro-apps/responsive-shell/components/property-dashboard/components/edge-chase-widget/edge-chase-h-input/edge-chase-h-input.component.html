@@ -1,0 +1,9 @@
+<p>--edgeChase-h</p>
+<box-size-input
+    [DefaultSelection]="Size"
+    (UpdateSelection)="updateSize($event)"
+></box-size-input>
+<article>
+    <button type="button" (click)="saveSelection()">save</button>
+    <button type="button" (click)="cancelSelection()">cancel</button>
+</article>

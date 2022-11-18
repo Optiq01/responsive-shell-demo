@@ -1,0 +1,43 @@
+@import url('../../../srcry.css');
+
+:host{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.boxDemo{
+    display: grid;
+
+    /*--baseSize-w: var(--tiny-2-3);
+    --baseSize-h: var(--tiny-2-3);
+    --stretchShrink-w-start: 800px;
+    --stretchShrink-w-speed: 5;
+    --stretchShrink-w-min: var(--loMed-2-5);*/
+
+    /*width: var(--StretchShrinkMinEquation-w);
+    height: var(--StretchShrinkMinEquation-h);*/
+    /*width: 100px;
+    height: 100px;*/
+    --crushGap-w: var(--mt-17);
+    --baseSize-w: var(--tiny-2-3);
+    --edgeChase-w: var(--small-1-4);
+    --chaseStop-w: var(--hiMed-1-3);
+    --stretchShrink-w-start: 800px;
+    --stretchShrink-w-speed: 5;
+    --stretchShrink-w-min: var(--loMed-2-5);
+
+    --baseSize-h: var(--tiny-2-3);
+    --edgeChase-h: var(--loMed-2-6);
+    --chaseStop-h: var(--small-1-2);
+    --squishGrowth-h-start: 400px;
+    --squishGrowth-h-speed: 5;
+    --squishGrowth-h-max: var(--small-2-2);
+
+    background-color: orange;
+
+    /*width: 200px;
+    height: 200px;*/
+
+}

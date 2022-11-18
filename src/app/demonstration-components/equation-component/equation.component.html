@@ -1,0 +1,10 @@
+<article class="mainShell">
+    <p class="numberASection">{{Equation.numberA}}</p>
+    <p *ngIf="Equation.equation === 'add'" class="operatorSection">&plus;</p>
+    <p *ngIf="Equation.equation === 'subtract'" class="operatorSection">&minus;</p>
+    <p *ngIf="Equation.equation === 'multiply'" class="operatorSection">&times;</p>
+    <p *ngIf="Equation.equation === 'divide'" class="operatorSection">&divide;</p>
+    <p class="numberBSection">{{Equation.numberB}}</p>
+    <p class="equalsSection">&equals;</p>
+    <p class="resultSection">{{Equation.result}}</p>
+</article>

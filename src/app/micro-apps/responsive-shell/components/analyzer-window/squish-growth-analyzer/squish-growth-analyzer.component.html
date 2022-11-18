@@ -1,0 +1,12 @@
+<section class="mainShell">
+
+    <size-output [Size]="Props.squishGrowthMaster" [Title]="'Master Size'"></size-output>
+    
+    <size-output [Size]="Props.squishGrowthMaxCore" [Title]="'Max Core'"></size-output>
+    
+    <size-output [Size]="Props.squishGrowthMaxNudge" [Title]="'Max Nudge'"></size-output>
+    
+    <!--<size-output [Size]="Props.elementSize" [Title]="'Element Size'"></size-output>-->
+    <element-size-analyzer [Size]="Props.elementSize" [Behaviors]="Props.currentBehavior"></element-size-analyzer>
+    
+</section>

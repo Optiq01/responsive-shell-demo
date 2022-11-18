@@ -1,0 +1,1 @@
+export function CreateSrcryValue(setting: string): string { return `var(--${setting})`; }

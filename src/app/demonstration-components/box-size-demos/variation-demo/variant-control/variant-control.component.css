@@ -1,0 +1,45 @@
+:host{
+    display: grid;
+    /*width: var(--loMed-2-4);*/
+    padding: 0 var(--micro-1-3);
+    justify-self: center;
+}
+
+.readout{
+    display: grid;
+    margin: var(--micro-1-4) 0;
+    font-size: var(--text-caption-3);
+    justify-self: center;
+    justify-items: center;
+    row-gap: var(--micro-1-5);
+}
+
+.controlShell{
+    display: grid;
+    row-gap: var(--micro-2-3);
+}
+
+.mainShell{
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
+    grid-column-gap: var(--mt-3);
+    width: auto;
+    max-width: var(--hiMed-2-3);
+}
+
+.buttonTitle{
+    font-size: var(--text-article-1);
+}
+
+.button{
+    padding: calc(var(--bsp) * 2);
+}
+
+.active{
+    background-color: orange;
+}
+
+.inactive{
+    background-color: lightblue;
+}

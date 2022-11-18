@@ -1,0 +1,11 @@
+@import url('../../../../srcry.css');
+
+.demoBox{
+    display: block;
+    /*background-color: orange;*/
+   /* width: var(--loMed-1-11);
+    height: var(--xSmall-1-5);*/
+    /*width: var(--loMed-1-11);
+    height: var(--xSmall-1-5);*/
+    border: blue solid var(--line-light);
+}

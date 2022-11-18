@@ -1,0 +1,14 @@
+:host{
+    display: grid;
+    /*place-items: center;*/
+    width: 100%;
+    height: min-content;
+    /*max-height: 100vh;*/
+    grid-auto-rows: auto;
+    
+}
+
+.outlet{
+    height: 0px;
+    grid-area: 1/1/2/2;
+}
